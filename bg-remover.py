@@ -87,7 +87,7 @@ while True:
             )
             if response.status_code == requests.codes.ok:
                 with open(output_path, 'wb') as out:
-                    out.write(response.condtent)
+                    out.write(response.content)
                 print("Download completed!")
             else:
                 print("Error:", response.status_code, response.text)
