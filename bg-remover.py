@@ -86,8 +86,8 @@ while True:
                 headers={'X-Api-Key': 'HXdCdqFSDFzkU4JeXVRUvETT'},
             )
             if response.status_code == requests.codes.ok:
-                with open('no-bg.png', 'wb') as out:
-                    out.write(response.content)
+                with open(output_path, 'wb') as out:
+                    out.write(response.condtent)
                 print("Download completed!")
             else:
                 print("Error:", response.status_code, response.text)
