@@ -49,7 +49,9 @@ while True:
             input_path = easygui.fileopenbox(title="Select image file")
             sleep(0.5)
             print("Selecting new image directory...")
-            output_path = easygui.filesavebox(title="Save file to...")
+            output_path = easygui.filesavebox(title="Save file to...", filetypes=["*.png"], default="Transparent.png")
+            if not output_path.endswith(".png"):
+                output_path += ".png"
             sleep(0.5)
             print("Image directory selected: At %s" % output_path)
 
@@ -73,7 +75,9 @@ while True:
             _url = input("Image link here: ")
             sleep(0.5)
             print("Selecting new image directory...")
-            output_path = easygui.filesavebox(title="Save file to...")
+            output_path = easygui.filesavebox(title="Save file to...", filetypes=["*.png"], default="Transparent.png")
+            if not output_path.endswith(".png"):
+                output_path += ".png"
             sleep(0.5)
             print("Image directory selected: At %s" % output_path)
 
@@ -100,7 +104,9 @@ while True:
         input_path = easygui.fileopenbox(title="Select image file")
         sleep(0.5)
         print("Selecting new image directory...")
-        output_path = easygui.filesavebox(title="Save file to...")
+        output_path = easygui.filesavebox(title="Save file to...", filetypes=["*.png"], default="Transparent.png")
+        if not output_path.endswith(".png"):
+            output_path += ".png"
         sleep(0.5)
         print("Image directory selected: At %s" % output_path)
 
